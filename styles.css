@@ -10,7 +10,7 @@ body {
 }
 
 #landing {
-  background: url("./images/globe-2.gif") no-repeat center center;
+  background: url("./globe-2.gif") no-repeat center center;
   background-size: cover;
   padding: 20px;
 }
