@@ -6,41 +6,184 @@
   background: url("./pattern.svg");
   animation: wave1 3s infinite ease-in-out, wave2 3s infinite ease-in-out;
 }
-body {
+.city-name-li {
+  color: red;
+}
+/* body {
+  /* background-color: #0ca5a0;
+  background: url("./pattern.svg");  */
+/* font-family: "Cairo", serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+} 
+ */
+
+.cairo {
+  font-family: "Cairo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+section {
+  /* text-align: center; */
+  /* direction: rtl; */
+  margin: 50px;
+  margin-bottom: 100px;
+
+  /* width: 100vw;
+  height: 100vh; */
 }
 
-#landing {
-  background: url("./globe-2.gif") no-repeat center center;
-  background-size: cover;
-  padding: 20px;
+.section-visible {
+  opacity: 1;
+  transform: translateY(0); /* Move back to original position */
 }
-.landing-box {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.56);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(6.9px);
-  border: 1px solid rgba(255, 255, 255, 0.62);
-}
-/* Animation for the first wave */
-@keyframes wave1 {
-  0%,
-  100% {
-    background-position: 0 0, 0 10px;
-  }
-  50% {
-    background-position: 0 10px, 0 0;
-  }
+h1 {
+  font-family: "Cairo", serif;
+  font-weight: 600;
+  margin: 10px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-/* Animation for the second wave (opposite direction) */
-@keyframes wave2 {
-  0%,
-  100% {
-    background-position: 0 10px, 0 0;
-  }
-  50% {
-    background-position: 0 0, 0 10px;
-  }
+p {
+  font-family: "Cairo", serif;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.section-img {
+  width: 39%;
+  height: 300px;
+  font-family: "Cairo", serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: rgba(16, 94, 98, 0.7);
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+/* Initially hide the card */
+ul {
+  font-family: "Cairo", serif;
+}
+
+#cities-title {
+  text-align: center;
+}
+#cities-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.card {
+  width: 50%;
+  display: flex; /* This helps to make the card take the full height of its container */
+  flex-direction: column; /* Stack content vertically */
+  height: min-content; /* Ensure each card stretches to the same height */
+}
+.card img {
+  height: 200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* .main {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card_image {
+  height: calc(13 * 1.2rem);
+  padding: 1.2rem 1.2rem 0;
+  position: relative;
+}
+.card_image:before,
+.card_image:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  left: 60%;
+  top: 0;
+  height: 45px;
+  background: #e6e6e6b8;
+  transform: rotate(45deg);
+}
+.card_image:after {
+  transform: rotate(-45deg);
+  top: auto;
+  bottom: -22px;
+  left: 40%;
+}
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards_item {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+
+.card_recipe {
+  background-color: white;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 30px;
+  background: repeating-linear-gradient(
+        #0000 0 calc(1.2rem - 1px),
+        #66afe1 0 1.2rem
+      )
+      right bottom / 100% 100%,
+    linear-gradient(red 0 0) 30px 0/2px 100% #fff;
+  background-repeat: no-repeat;
+  line-height: 1.2rem;
+  -webkit-mask: radial-gradient(circle 0.8rem at 2px 50%, #0000 98%, #000) 0 0/100%
+    2.4rem;
+}
+
+.card_content {
+  padding: 1.2rem;
+}
+
+h2.card_title,
+p {
+  margin: 1.2rem 0;
+}
+h2.card_title {
+  font-size: 1.3em;
 }
