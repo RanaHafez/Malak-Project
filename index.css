@@ -1,0 +1,55 @@
+#canvas {
+  width: 100%;
+  height: 97%;
+  object-fit: cover; /* Ensures the canvas scales to cover the full area */
+  /* background-color: #92d4fb; */
+  background: url("./images/pattern.svg");
+  animation: wave1 3s infinite ease-in-out, wave2 3s infinite ease-in-out;
+}
+body {
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #8b5a2b;
+}
+
+footer {
+  background-color: #8b5a2b;
+  color: #f5deb3;
+}
+#landing {
+  background: url("./images/globe-2.gif") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+}
+.landing-box {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+}
+/* Animation for the first wave */
+@keyframes wave1 {
+  0%,
+  100% {
+    background-position: 0 0, 0 10px;
+  }
+  50% {
+    background-position: 0 10px, 0 0;
+  }
+}
+
+/* Animation for the second wave (opposite direction) */
+@keyframes wave2 {
+  0%,
+  100% {
+    background-position: 0 10px, 0 0;
+  }
+  50% {
+    background-position: 0 0, 0 10px;
+  }
+}

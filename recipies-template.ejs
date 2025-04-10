@@ -1,0 +1,17 @@
+<ul class="cards">
+  <% recipes.forEach(function(recipe) { %>
+  <li class="cards_item">
+    <div class="card_recipe">
+      <div class="card_image">
+        <img src="<%= recipe.img %>" alt="<%= recipe.title %>" />
+      </div>
+      <div class="card_content">
+        <h2 class="card_title"><%= recipe.title %></h2>
+        <div class="card_text">
+          <p><%= recipe.description %></p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <% }); %>
+</ul>

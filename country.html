@@ -1,2 +1,126 @@
-<h1>Hello</h1>
-<h3>hello kokokoko</h3>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Country</title>
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <header class="p-3 text-bg-light" style="background-color: #498886 !important;">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="javascript:void(0);"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+            onclick=""
+          >
+            Home
+          </a> 
+        </div>
+        <div class="text-end"></div>
+      </div>
+    </header>
+    <section id="country-flag" class="position-relative">
+      <img src="./images/ma-gif-flag.gif" alt="Country Flag" class="w-100"/>
+      <div class="p-5 text-center bg-body-tertiary">
+        <div class="container py-5">
+          <h1 id="country-name" class="text-body-emphasis">ليبيا</h1>
+        </div>
+      </div>
+    </section>
+    <section id="geo">
+      <div class="section-title-shape">
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+        <h1 id="geo-title">الموقع الجغرافي</h1>
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+      </div>
+      
+      <div class="geo-container">
+        
+        <img id="geo-map" src="images/ma (3).svg" style="width: 20%;" />
+        <div id="geo-content"></div>
+      </div>
+    </section>
+
+    <section id="cities">
+      <div class="section-title-shape">
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+        <h1 id="cities-title">الموقع الجغرافي</h1>
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+      </div>
+      <!-- <h1 id="cities-title"></h1> -->
+      <div id="cities-content">
+
+      </div> 
+      </div>
+    </section>
+    <section>
+      <div class="section-title-shape">
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+        <h1 id="economy-title">الموقع الجغرافي</h1>
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+      </div>
+      <!-- <h1 id="economy-title">الأقتصاد</h1> -->
+      <!-- <img src="images/stock.jpg" class="section-img float-right" /> -->
+      <div id="economy-content"></div>
+    </section>
+    <section id="recipe-section">
+      <div class="section-title-shape">
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+        <h1 id="recipies-title">الموقع الجغرافي</h1>
+        <svg width="20" height="20" viewBox="0 0 200 200" fill="#7ccbae" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_133_2)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7143 0H0.71429V50C0.71429 75.462 19.7466 96.4788 44.361 99.6002C19.4015 102.402 4.22025e-06 123.578 2.18557e-06 149.286L0 199.286H50C75.462 199.286 96.4788 180.253 99.6002 155.639C102.402 180.599 123.578 200 149.286 200H199.286V150C199.286 124.538 180.253 103.521 155.639 100.4C180.599 97.5984 200 76.422 200 50.7143V0.714286L150 0.714284C124.538 0.714282 103.521 19.7466 100.4 44.361C97.5984 19.4015 76.422 0 50.7143 0Z" fill="url(#paint0_linear_133_2)"/> </g> <defs> <linearGradient id="paint0_linear_133_2" x1="27.5" y1="19" x2="149" y2="174.5" gradientUnits="userSpaceOnUse"> <stop stop-color="#7ccbae"/> <stop offset="1" stop-color="#14757a"/> </linearGradient> <clipPath id="clip0_133_2"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+      </div>
+      <!-- <h1 id="recipies-title"></h1> -->
+      <div id="recipies-content" class="cards">
+        // recipe template 
+      </div>
+    </section>
+      <footer class="py-3">
+        <p class="text-center text-body-secondary">© 2025 Malak ❤️ By Rana</p>
+      </footer>
+      <button class="floating-btn">
+        <a
+        href="javascript:void(0);"
+        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+        onclick="switchLanguage()"
+      >
+        <img id="lang-switcher-icon" width="30px" src="./square.png" />
+      </button>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/ejs@3.1.10/ejs.min.js
+"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/ejs@3.1.10/ejs.min.js
+"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
