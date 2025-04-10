@@ -167,20 +167,20 @@
             inputs.forEach((input) => {
               // Check the current input value (e.g., if it's a boolean input related to a specific country)
               console.log(input.name, input.value);
-
+              const baseURL = "/Malak-Project";
               // Example: Check if the input represents a country, for example 'onKuwait'
               if (input.name === "onMA" && input.value === true) {
                 // offcanvas.show();
-                window.location.href = "/country.html?country=ma";
+                window.location.href = `${baseURL}/country.html?country=ma`;
                 // Perform any action related to Kuwait here (e.g., navigate to a new page)
               } else if (input.name === "onLY"  && input.value === true) {
-                window.location.href = "/country.html?country=ly";
+                window.location.href = `${baseURL}/country.html?country=ly`;
               } else if (input.name === "onTN" && input.value === true) {
-                window.location.href = "/country.html?country=tn";
+                window.location.href = `${baseURL}/country.html?country=tn`;
               } else if (input.name === "onMR" && input.value === true) {
-                window.location.href = "/country.html?country=mr";
+                window.location.href = `${baseURL}/country.html?country=mr`;
               } else if (input.name === "onDZ" && input.value === true){
-                window.location.href = "/country.html?country=dz";
+                window.location.href = `${baseURL}/country.html?country=dz`;
               }
             });
 
