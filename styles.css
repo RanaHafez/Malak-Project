@@ -592,6 +592,7 @@ figure figcaption p {
   align-items: center;
   text-align: center;
   padding: 20px;
+  padding-top: 30px;
   box-sizing: border-box;
 }
 
@@ -620,6 +621,26 @@ figure figcaption p {
   line-height: 1.5;
 }
 
+.cards-container .card .face.face2 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start from top */
+  align-items: center; /* Keep horizontal center */
+  text-align: center;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+/* Optional: Create pseudo vertical centering for short content */
+.cards-container .card .face.face2 .content::before {
+  content: "";
+  flex-grow: 1;
+  max-height: 40%;
+}
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .cards-container {
@@ -679,4 +700,60 @@ figure figcaption p {
   font-weight: 900;
   color: black !important;
   opacity: 1 !important;
+}
+#landing {
+  background: url("./images/globe-2.gif") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  margin: 0;
+}
+.landing-box {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+#landing.sd-bg {
+  background: url("./images/waving-flags/sudan-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.mr-bg {
+  background: url("./images/waving-flags/mauritania-flag-gif.gif") no-repeat
+    center center;
+  background-size: cover;
+}
+
+#landing.ma-bg {
+  background: url("./images/waving-flags/ma-gif-flag.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+#landing.ly-bg {
+  background: url("./images/waving-flags/libya-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.tn-bg {
+  background: url("./images/waving-flags/tunisia-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.dz-bg {
+  background: url("./images/waving-flags/algeria-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.dj-bg {
+  background: url("./images/waving-flags/djibouti-flag.gif") no-repeat center
+    center;
+  background-size: cover;
 }

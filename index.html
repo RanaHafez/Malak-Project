@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <section id="heading">
+    <!-- <section id="heading">
       <header class="p-3 text-bg-light">
         <div class="container">
           <div
@@ -48,17 +48,26 @@
               />
             </form> -->
 
-            <div class="text-end">
+    <!-- <div class="text-end">
             </div>
           </div>
         </div>
       </header>
-    </section>
+    </section> -->
+    -->
     <section id="landing">
-      <div class="landing-box position-relative overflow-hidden  p-3 p-md-5 m-md-3 text-center">
+      <div
+        class="landing-box position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center"
+      >
         <div class="col-md-6 p-lg-5 mx-auto my-5">
           <h1 class="display-3 fw-bold">الدول العربية</h1>
-          <h4 class="fw-normal text-muted mb-3">ناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فء.</h4>
+          <h4 class="fw-normal text-muted mb-3">
+            ناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي
+            القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في
+            الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي
+            توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى
+            نصي، هنا يوجد محتوى نصي" فء.
+          </h4>
           <div class="d-flex gap-3 justify-content-center lead fw-normal">
             <a class="icon-link" href="#map">
               انظر الخريطة
@@ -67,17 +76,19 @@
           </div>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        <div
+          class="product-device product-device-2 shadow-sm d-none d-md-block"
+        ></div>
       </div>
     </section>
-<section id="map">
-  <canvas id="canvas"></canvas>
-</section>
-<section>
-  <footer class="py-3 my-1">
-    <p class="text-center text-body-secondary">© 2025 Malak ❤️ By Rana</p>
-  </footer>
-</section>
+    <section id="map">
+      <canvas id="canvas"></canvas>
+    </section>
+    <section>
+      <footer class="py-3 my-1">
+        <p class="text-center text-body-secondary">© 2025 Malak ❤️ By Rana</p>
+      </footer>
+    </section>
     <!-- Offcanvas Trigger (can be removed since it's triggered by JS) -->
     <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Link with href</a> -->
     <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Button with data-bs-target</button> -->
@@ -167,24 +178,29 @@
             inputs.forEach((input) => {
               // Check the current input value (e.g., if it's a boolean input related to a specific country)
               console.log(input.name, input.value);
+              //
               const baseURL = "/Malak-Project";
               // Example: Check if the input represents a country, for example 'onKuwait'
               if (input.name === "onMA" && input.value === true) {
                 // offcanvas.show();
                 window.location.href = `${baseURL}/country.html?country=ma`;
                 // Perform any action related to Kuwait here (e.g., navigate to a new page)
-              } else if (input.name === "onLY"  && input.value === true) {
+              } else if (input.name === "onLY" && input.value === true) {
                 window.location.href = `${baseURL}/country.html?country=ly`;
               } else if (input.name === "onTN" && input.value === true) {
                 window.location.href = `${baseURL}/country.html?country=tn`;
               } else if (input.name === "onMR" && input.value === true) {
                 window.location.href = `${baseURL}/country.html?country=mr`;
-              } else if (input.name === "onDZ" && input.value === true){
+              } else if (input.name === "onDZ" && input.value === true) {
                 window.location.href = `${baseURL}/country.html?country=dz`;
-              } else if (input.name === "onSD" && input.value === true){
+              } else if (input.name === "onSD" && input.value === true) {
                 window.location.href = `${baseURL}/country.html?country=sd`;
-              } else if (input.name === "onDJ" && input.value === true){
+              } else if (input.name === "onDJ" && input.value === true) {
                 window.location.href = `${baseURL}/country.html?country=dj`;
+              } else if (input.name === "onKM" && input.value === true) {
+                window.location.href = `${baseURL}/country.html?country=km`;
+              } else if (input.name === "onQA" && input.value === true) {
+                window.location.href = `${baseURL}/country.html?country=qa`;
               }
             });
 
