@@ -3,8 +3,9 @@
   height: 97%;
   object-fit: cover; /* Ensures the canvas scales to cover the full area */
   /* background-color: #92d4fb; */
-  background: url("./images/pattern.svg");
+  /* background: url("./images/pattern.svg"); */
   animation: wave1 3s infinite ease-in-out, wave2 3s infinite ease-in-out;
+  background-color: #498886;
 }
 body {
   background-color: #f5f5f5;

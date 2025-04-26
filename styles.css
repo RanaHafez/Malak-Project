@@ -757,3 +757,38 @@ figure figcaption p {
     center;
   background-size: cover;
 }
+
+#landing.bh-bg {
+  background: url("./images/waving-flags/bahrain-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.km-bg {
+  background: url("./images/waving-flags/comoros-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.qa-bg {
+  background: url("./images/waving-flags/qatar-flag.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.om-bg {
+  background: url("./images/waving-flags/oman-flag.gif") no-repeat center center;
+  background-size: cover;
+}
+
+#landing.ae-bg {
+  background: url("./images/waving-flags/united-arab-emirates-flag-gif.gif")
+    no-repeat center center;
+  background-size: cover;
+}
+
+#landing.ye-bg {
+  background: url("./images/waving-flags/yemen-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
