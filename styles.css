@@ -792,3 +792,15 @@ figure figcaption p {
     center;
   background-size: cover;
 }
+
+#landing.lb-bg {
+  background: url("./images/waving-flags/lebanon-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.eg-bg {
+  background: url("./images/waving-flags/egypt-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
