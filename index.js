@@ -2523,6 +2523,10 @@ const countries = {
   },
 };
 
+const home = {
+  ar: "الرئيسية",
+  ch: "主页",
+};
 // The language can either be 'ar' for Arabic or 'ch' for Chinese (or any other languages you support)
 let selectedLanguage = "ar"; // Default language is Arabic
 let c = countries.li;
@@ -2642,6 +2646,8 @@ function setContent(c, country) {
 
   landingSection.classList.add(`${country}-bg`);
 
+  document.getElementById("app-bar").textContent = home[selectedLanguage];
+
   document.getElementById("country-name").textContent =
     c.countryName[selectedLanguage];
 
@@ -2683,15 +2689,29 @@ function setContent(c, country) {
 }
 
 function changeTextDirection() {
-  // Change the text direction based on the selected language
-  const sections = document.querySelectorAll("section"); // Select the first <section> ta
+  const sections = document.querySelectorAll("section");
   const img = document.getElementById("lang-switcher-icon");
+  const geoMap = document.getElementById("geo-map");
+  const geoContent = document.getElementById("geo-content");
+  const carouselTexts = document.querySelectorAll(".carousel-text");
 
   sections.forEach((section) => {
     if (selectedLanguage === "ar") {
-      section.style.direction = "rtl"; // Right to Left for Arabic
+      section.style.direction = "rtl";
+      geoMap.style.float = "right";
+      geoContent.style.textAlign = "right";
     } else {
-      section.style.direction = "ltr"; // Left to Right for Chinese
+      section.style.direction = "ltr";
+      geoMap.style.float = "left";
+      geoContent.style.textAlign = "left";
+    }
+  });
+
+  carouselTexts.forEach((text) => {
+    if (selectedLanguage === "ar") {
+      text.setAttribute("text-align", "right");
+    } else {
+      text.setAttribute("text-align", "right");
     }
   });
 
@@ -2707,7 +2727,7 @@ function switchLanguage() {
   // Toggle the language
   selectedLanguage = selectedLanguage === "ar" ? "ch" : "ar";
   setContent(c);
-  // changeTextDirection();
+  changeTextDirection();
 }
 
 // Initialize the content with the default language

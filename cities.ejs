@@ -8,7 +8,9 @@
           class="carousel-img"
           alt="<%= city.title %>"
         />
-        <div class="carousel-text">
+        <div
+          class="carousel-text <%= selectedLanguage === 'ar' ? 'text-right' : 'text-left' %>"
+        >
           <h2><%= city.title %></h2>
           <p><%= city.description %></p>
         </div>
