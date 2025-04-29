@@ -6,9 +6,13 @@
   /* background: url("./images/pattern.svg"); */
   animation: wave1 3s infinite ease-in-out, wave2 3s infinite ease-in-out;
   background-color: #498886;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 body {
   background-color: #f5f5f5;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 header {
@@ -16,14 +20,24 @@ header {
 }
 
 footer {
-  background-color: #8b5a2b;
-  color: #f5deb3;
+  color: white !important;
+  background: url("./images/vecteezy_abstract-cute-color-geometric-tribal-ethnic-ikat-folklore_16446427.jpg")
+    no-repeat center center !important;
+  background-size: cover !important;
+  margin: 0;
+  padding: 0;
+  height: 60px;
 }
 #landing {
-  background: url("./images/globe-2.gif") no-repeat center center;
+  background: url("./images/Globe \(1\).gif") no-repeat center center;
   background-size: cover;
   padding: 20px;
 }
+
+#landing h4 {
+  text-align: justify;
+}
+
 .landing-box {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.56);
@@ -53,4 +67,52 @@ footer {
   50% {
     background-position: 0 0, 0 10px;
   }
+}
+
+#heading {
+  background: url("./images/vecteezy_abstract-cute-color-geometric-tribal-ethnic-ikat-folklore_16446427.jpg")
+    no-repeat center center !important;
+  background-size: cover !important;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+#map {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#section {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.floating-btn {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  width: 60px; /* Button size */
+  height: 60px; /* Button size */
+  background-color: #008080; /* Green color */
+  color: white;
+  border-radius: 50%; /* Circular shape */
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for visibility */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.floating-btn:hover {
+  background-color: #006666; /* Darker green on hover */
+}
+
+.floating-btn span {
+  font-weight: bold;
+  line-height: 1;
 }
