@@ -31,6 +31,7 @@ function changeMainTextDirection() {
 }
 
 setContent();
+changeMainTextDirection();
 function changeLanguage() {
   selectedLanguage = selectedLanguage === "ar" ? "ch" : "ar";
   setContent();
