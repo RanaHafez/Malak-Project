@@ -746,6 +746,7 @@ figure figcaption p {
 
 #app-bar {
   font-size: large;
+  font-size: 2rem;
 }
 
 #app-bar:hover {
@@ -854,5 +855,18 @@ figure figcaption p {
 #landing.eg-bg {
   background: url("./images/waving-flags/egypt-flag-gif.gif") no-repeat center
     center;
+  background-size: cover;
+}
+
+#header-header {
+  background: url("./images/vecteezy_abstract-cute-color-geometric-tribal-ethnic-ikat-folklore_16446427.jpg")
+    no-repeat center center !important;
+  background-size: cover !important;
+  color: white !important;
+}
+
+footer {
+  background: url("./images/vecteezy_abstract-cute-color-geometric-tribal-ethnic-ikat-folklore_16446427.jpg")
+    no-repeat center center !important;
   background-size: cover;
 }
