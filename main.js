@@ -23,10 +23,17 @@ function changeMainTextDirection() {
   const title = document.querySelector(".landing-title");
   const text = document.querySelector(".landing-text");
 
+  const img = document.getElementById("lang-switcher-icon");
   if (selectedLanguage === "ar") {
     text.setAttribute("dir", "rtl");
   } else {
     text.setAttribute("dir", "ltr");
+  }
+
+  if (selectedLanguage === "ar") {
+    img.setAttribute("src", "./square.png");
+  } else {
+    img.setAttribute("src", "images/saudi-arabia (3).png");
   }
 }
 
