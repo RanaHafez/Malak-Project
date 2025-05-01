@@ -71,177 +71,149 @@
     >
       <img id="lang-switcher-icon" width="30px" src="./square.png" />
     </button>
-    <!-- Offcanvas Trigger (can be removed since it's triggered by JS) -->
-    <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Link with href</a> -->
-    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Button with data-bs-target</button> -->
-
-    <!-- Offcanvas Structure -->
-
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
+    <script src="https://unpkg.com/@rive-app/canvas@2.15.6"></script>
     <script src="./index.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {});
+ document.addEventListener("DOMContentLoaded", () => {});
 
-      const canvas = document.getElementById("canvas");
-      const context = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+fetch("/public/final-map-map.riv")
+  .then(response => {
+    if (!response.ok) throw new Error("HTTP error");
+    return response.arrayBuffer();
+  })
+  .then(buffer => {
+    const r = new rive.Rive({
+      buffer: buffer,
+      canvas: canvas,
+      autoplay: true,
+      stateMachines: "State Machine 1",
+      onLoad: () => {
+        r.resizeDrawingSurfaceToCanvas();
+        // renderCanvas();
 
-      const r = new rive.Rive({
-        src: "./j.riv",
-        canvas: canvas,
-        autoplay: true,
-        stateMachines: "State Machine 1",
-        onLoad: (_) => {
-          // const inputs =;
-          r.resizeDrawingSurfaceToCanvas();
-          renderCanvas();
-          const offcanvasElement = document.getElementById("offcanvasExample");
-          const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+        const inputs = r.stateMachineInputs("State Machine 1");
+        console.log(inputs);
+        canvas.addEventListener("pointerdown", (event) => {
+          inputs.forEach((input) => {
+            console.log(input.name, input.value);
+            const baseURL = "";
+            
+            // Simplified country mapping
+            const countryMap = {
+              'onMA': 'ma',
+              'onLY': 'ly',
+              'onTN': 'tn',
+              'onMR': 'mr',
+              'onDZ': 'dz',
+              'onSD': 'sd',
+              'onDJ': 'dj',
+              'onKM': 'km',
+              'onQA': 'qa',
+              'onYE': 'ye',
+              'onOM': 'om',
+              'onAE': 'ae',
+              'onBH': 'bh',
+              'onEG': 'eg',
+              'onLB': 'lb', 
+              'onSA': 'sa'
+            };
 
-          const countryData = {
-            Kuwait: {
-              name: "Kuwait",
-              description: "Kuwait is a country in the Middle East.",
-              flagUrl: "https://flagcdn.com/w320/kw.png",
-              additionalInfo: "Additional information about Kuwait...",
-            },
-            Oman: {
-              name: "Oman",
-              description:
-                "Oman is a country on the southeastern coast of the Arabian Peninsula.",
-              flagUrl: "https://flagcdn.com/w320/om.png",
-              additionalInfo: "Additional information about Oman...",
-            },
-            // Add more countries here as needed
-          };
-
-          const inputs = r.stateMachineInputs("State Machine 1");
-          canvas.addEventListener("pointerdown", (event) => {
-            inputs.forEach((input) => {
-              // Check the current input value (e.g., if it's a boolean input related to a specific country)
-              console.log(input.name, input.value);
-              ///The-Arab-World
-              const baseURL = "";
-              // Example: Check if the input represents a country, for example 'onKuwait'
-              if (input.name === "onMA" && input.value === true) {
-                // offcanvas.show();
-                window.location.href = `${baseURL}/country.html?country=ma`;
-                // Perform any action related to Kuwait here (e.g., navigate to a new page)
-              } else if (input.name === "onLY" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=ly`;
-              } else if (input.name === "onTN" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=tn`;
-              } else if (input.name === "onMR" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=mr`;
-              } else if (input.name === "onDZ" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=dz`;
-              } else if (input.name === "onSD" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=sd`;
-              } else if (input.name === "onDJ" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=dj`;
-              } else if (input.name === "onKM" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=km`;
-              } else if (input.name === "onQA" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=qa`;
-              } else if (input.name === "onYE" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=ye`;
-              } else if (input.name === "onOM" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=om`;
-              } else if (input.name === "onAE" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=ae`;
-              } else if (input.name === "onBH" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=bh`;
-              } else if (input.name === "onEG" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=eg`;
-              } else if (input.name === "onLB" && input.value === true) {
-                window.location.href = `${baseURL}/country.html?country=lb`;
-              }
-            });
+            if (input.value === true && countryMap[input.name]) {
+              console.log("country : " + countryMap[input.name]);
+              window.location.href = `${baseURL}/country.html?country=${countryMap[input.name]}`;
+            }
           });
-        },
-      });
-      // Canvas size
-      // const resizeCanvas = () => {
-      //   const pixelRatio = window.devicePixelRatio || 1;
-      //   canvas.width = window.innerWidth * pixelRatio;
-      //   canvas.height = window.innerHeight * pixelRatio;
-      //   context.scale(pixelRatio, pixelRatio);
-      // };
-      // resizeCanvas();
-      // window.addEventListener("resize", resizeCanvas);
-      // Transformation state
-      let scale = 1;
-      let translateX = 0;
-      let translateY = 0;
-      let isPanning = false;
-      let startX = 0;
-      let startY = 0;
+        });
+      },
+      onLoadError: (error) => {
+        console.error("Rive loading error:", error);
+      }
+    });
+  })
+  .catch(err => {
+    console.error("File load failed:", err);
+  });
+// const r = new rive.Rive({
+//   src: "testing-p.riv",
+//   canvas: canvas,
+//   autoplay: true,
+//   stateMachines: "State Machine 1",
+//   onLoad: (_) => {
+//     // const inputs =;
+//     r.resizeDrawingSurfaceToCanvas();
+//     renderCanvas();
+//     const offcanvasElement = document.getElementById("offcanvasExample");
+//     const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
 
-      // Function to render with transformations
-      const renderCanvas = () => {
-        context.save();
-        context.clearRect(0, 0, canvas.width, canvas.height);
+//     const countryData = {
+//       Kuwait: {
+//         name: "Kuwait",
+//         description: "Kuwait is a country in the Middle East.",
+//         flagUrl: "https://flagcdn.com/w320/kw.png",
+//         additionalInfo: "Additional information about Kuwait...",
+//       },
+//       Oman: {
+//         name: "Oman",
+//         description:
+//           "Oman is a country on the southeastern coast of the Arabian Peninsula.",
+//         flagUrl: "https://flagcdn.com/w320/om.png",
+//         additionalInfo: "Additional information about Oman...",
+//       },
+//       // Add more countries here as needed
+//     };
 
-        // Apply transformations
-        context.translate(translateX, translateY);
-        context.scale(scale, scale);
-
-        // Let Rive draw the current frame
-        r.drawFrame();
-
-        context.restore();
-      };
-
-      // Zoom handlers
-      const zoomIn = () => {
-        scale = Math.min(scale + 0.1, 5); // Max zoom
-        renderCanvas();
-      };
-
-      const zoomOut = () => {
-        scale = Math.max(scale - 0.1, 0.5); // Min zoom
-        renderCanvas();
-      };
-
-      // Pan handlers
-      canvas.addEventListener("mousedown", (event) => {
-        isPanning = true;
-        startX = event.clientX - translateX;
-        startY = event.clientY - translateY;
-      });
-
-      canvas.addEventListener("mousemove", (event) => {
-        if (isPanning) {
-          translateX = event.clientX - startX;
-          translateY = event.clientY - startY;
-          renderCanvas();
-        }
-      });
-
-      canvas.addEventListener("mouseup", () => {
-        isPanning = false;
-      });
-
-      canvas.addEventListener("mouseleave", () => {
-        isPanning = false;
-      });
-
-      // // Attach zoom buttons
-      // document.getElementById("zoomIn").addEventListener("click", zoomIn);
-      // document.getElementById("zoomOut").addEventListener("click", zoomOut);
-
-      // Initial canvas setup
-      const resizeCanvas = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        renderCanvas();
-      };
-      window.addEventListener("resize", resizeCanvas);
-      resizeCanvas();
+//     const inputs = r.stateMachineInputs("State Machine 1");
+//     canvas.addEventListener("pointerdown", (event) => {
+//       inputs.forEach((input) => {
+//         // Check the current input value (e.g., if it's a boolean input related to a specific country)
+//         console.log(input.name, input.value);
+//         ///The-Arab-World
+//         const baseURL = "";
+//         // Example: Check if the input represents a country, for example 'onKuwait'
+//         if (input.name === "onMA" && input.value === true) {
+//           // offcanvas.show();
+//           window.location.href = `${baseURL}/country.html?country=ma`;
+//           // Perform any action related to Kuwait here (e.g., navigate to a new page)
+//         } else if (input.name === "onLY" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=ly`;
+//         } else if (input.name === "onTN" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=tn`;
+//         } else if (input.name === "onMR" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=mr`;
+//         } else if (input.name === "onDZ" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=dz`;
+//         } else if (input.name === "onSD" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=sd`;
+//         } else if (input.name === "onDJ" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=dj`;
+//         } else if (input.name === "onKM" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=km`;
+//         } else if (input.name === "onQA" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=qa`;
+//         } else if (input.name === "onYE" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=ye`;
+//         } else if (input.name === "onOM" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=om`;
+//         } else if (input.name === "onAE" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=ae`;
+//         } else if (input.name === "onBH" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=bh`;
+//         } else if (input.name === "onEG" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=eg`;
+//         } else if (input.name === "onLB" && input.value === true) {
+//           window.location.href = `${baseURL}/country.html?country=lb`;
+//         }
+//       });
+//     });
+//   },
+// });
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
