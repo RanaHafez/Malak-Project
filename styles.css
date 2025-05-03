@@ -893,6 +893,12 @@ figure figcaption p {
     center;
   background-size: cover;
 }
+
+#landing.so-bg {
+  background: url("./images/waving-flags/somalia-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
 #header-header {
   background: url("./images/vecteezy_abstract-cute-color-geometric-tribal-ethnic-ikat-folklore_16446427.jpg")
     no-repeat center center !important;
