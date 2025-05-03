@@ -221,7 +221,9 @@ ul {
 }
 
 .card_image {
-  height: calc(13 * 1.2rem);
+  width: 100%; /* Ensure the container takes full width */
+  height: auto; /* Let height adjust based on image aspect ratio */
+  aspect-ratio: 16 / 9; /* Optional: Set a consistent aspect ratio (adjust as needed) */
   padding: 1.2rem 1.2rem 0;
   position: relative;
   overflow: hidden;
@@ -244,16 +246,12 @@ ul {
   left: 40%;
 }
 .card_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 70%;
-  transform: scale(
-    1
-  ); /* Slight zoom-out to make sure the image fills the container */
-  transform-origin: center center; /* Keep the zoom centered */
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Cover the container, cropping as needed */
+  object-position: center center; /* Center the image */
+  display: block; /* Remove any inline spacing issues */
 }
-
 .cards_item {
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
 }
