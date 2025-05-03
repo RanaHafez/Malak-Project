@@ -2012,19 +2012,19 @@ const countries = {
         ],
         ch: [
           {
-            img: "./images/tajin.jpg",
+            img: "./images/om/f1.jpg",
             title: "舒瓦",
             description:
               "舒瓦意为烤肉，是阿曼的传统美食，通常在特殊场合准备。肉类用阿曼香料腌制后，用香蕉叶或棕榈叶包裹，放入地下沙炉中烹饪。",
           },
           {
-            img: "./images/tajin.jpg",
+            img: "./images/om/f2.jpg",
             title: "马赫布斯",
             description:
               "这是一种混合米饭菜肴，通常包含香料调味的肉类（牛肉或鸡肉）和蔬菜，有时还会配上酸奶或绿色沙拉。",
           },
           {
-            img: "./images/tajin.jpg",
+            img: "./images/om/f3.jpg",
             title: "阿曼面包",
             description:
               "阿曼面包有多种类型，包括厚的圆形面包和薄的餐盘大小的面包。这些面包通常是家庭自制或在面包店购买，常与各种菜肴一起食用。",
