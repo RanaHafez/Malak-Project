@@ -212,8 +212,8 @@ ul {
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* #recipies-content {
@@ -230,10 +230,10 @@ ul {
   margin-bottom: 20px;
   /* max-height: min-content;
   max-width: min-content; */
-  max-width: 400px;
+  max-width: 380px;
   max-height: 450px;
   min-height: 450px;
-  min-width: 400px;
+  min-width: 380px;
 }
 
 .card_image {
@@ -557,8 +557,14 @@ figure figcaption p {
   #cities {
     height: auto;
   }
+
   .cards {
     flex-direction: column;
+  }
+  .cards_item {
+    width: min-content;
+    max-width: 350px;
+    min-width: 350px;
   }
   .carousel-content {
     flex-direction: column;
