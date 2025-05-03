@@ -228,10 +228,12 @@ ul {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 20px;
-  max-height: min-content;
-  max-width: min-content;
-  min-height: 500px;
-  min-width: 500px;
+  /* max-height: min-content;
+  max-width: min-content; */
+  max-width: 400px;
+  max-height: 450px;
+  min-height: 450px;
+  min-width: 400px;
 }
 
 .card_image {
