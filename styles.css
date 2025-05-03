@@ -531,6 +531,16 @@ figure figcaption p {
 
 /* Mobile view */
 @media (max-width: 768px) {
+  /* section {
+    height: auto;
+  } */
+
+  #geo {
+    height: auto;
+  }
+  #cities {
+    height: auto;
+  }
   .carousel-content {
     flex-direction: column;
     padding: 0 15px; /* Add some padding on mobile */
