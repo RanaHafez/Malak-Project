@@ -875,6 +875,24 @@ figure figcaption p {
     center;
   background-size: cover;
 }
+
+#landing.pa-bg {
+  background: url("./images/waving-flags/palestinian-flag.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.iq-bg {
+  background: url("./images/waving-flags/iraq-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
+
+#landing.sy-bg {
+  background: url("./images/waving-flags/syria-flag-gif.gif") no-repeat center
+    center;
+  background-size: cover;
+}
 #header-header {
   background: url("./images/vecteezy_abstract-cute-color-geometric-tribal-ethnic-ikat-folklore_16446427.jpg")
     no-repeat center center !important;
