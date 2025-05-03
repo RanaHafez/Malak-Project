@@ -206,18 +206,32 @@ ul {
 } */
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+/* #recipies-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+} */
 
 .cards_item {
   display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 20px;
+  max-height: min-content;
+  max-width: min-content;
+  min-height: 500px;
+  min-width: 500px;
 }
 
 .card_image {
@@ -541,6 +555,7 @@ figure figcaption p {
   #cities {
     height: auto;
   }
+
   .carousel-content {
     flex-direction: column;
     padding: 0 15px; /* Add some padding on mobile */
