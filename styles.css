@@ -555,7 +555,9 @@ figure figcaption p {
   #cities {
     height: auto;
   }
-
+  .cards {
+    flex-direction: column;
+  }
   .carousel-content {
     flex-direction: column;
     padding: 0 15px; /* Add some padding on mobile */
